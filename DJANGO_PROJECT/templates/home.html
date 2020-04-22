@@ -1,0 +1,17 @@
+
+{% extends  'base.html' %}
+
+
+{% block content %}
+
+<h1>Hello Django-World</h1>
+<h2>{{name}}</h2>
+
+<form action="add" method="post" >
+	{% csrf_token %}
+	Enter 1st number : <input type="text" name="num1">
+	Enter 2nd number : <input type="text" name="num2">
+	<input type="submit">
+</form>
+
+{% endblock %}
